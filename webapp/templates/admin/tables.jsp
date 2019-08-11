@@ -140,7 +140,7 @@
         </div>
         <div class="form-group col-2">
             <label for="price"><%=Localization.getString("room-price")%></label>
-            <input type="number" class="form-control" id="price" name="price" min="0">
+            <input type="number" class="form-control" id="price" name="price" min="0" step="0.01">
         </div>
     </div>
     <button type="submit" class="btn btn-primary"><%=Localization.getString("user-main-req-btn")%></button>
