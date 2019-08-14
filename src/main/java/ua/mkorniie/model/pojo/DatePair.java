@@ -28,8 +28,8 @@ public class DatePair {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         DatePair datePair = (DatePair) o;
-        return startDate.equals(datePair.startDate) &&
-                endDate.equals(datePair.endDate);
+        return startDate.toString().equals(datePair.startDate.toString()) &&
+                endDate.toString().equals(datePair.endDate.toString());
     }
 
     @Override

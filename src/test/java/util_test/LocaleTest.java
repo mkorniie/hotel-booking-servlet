@@ -5,10 +5,9 @@ import ua.mkorniie.model.enums.Language;
 import ua.mkorniie.controller.util.Localization;
 
 
-//TODO: finish tests for util package
 public class LocaleTest {
     @Test
-    void getTexts() {
+    public void getTexts() {
         assert (Localization.getUaString("greeting").equals("Привіт."));
         assert (Localization.getEnString("greeting").equals("Hello."));
 
