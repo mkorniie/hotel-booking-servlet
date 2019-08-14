@@ -3,10 +3,10 @@ package ua.mkorniie.controller.servlets.user;
 import com.sun.istack.internal.NotNull;
 import ua.mkorniie.controller.dao.BillDAOProxy;
 import ua.mkorniie.controller.dao.RequestDAO;
-import ua.mkorniie.model.pojo.User;
 import ua.mkorniie.controller.util.Pagination;
 import ua.mkorniie.model.pojo.Bill;
 import ua.mkorniie.model.pojo.Request;
+import ua.mkorniie.model.pojo.User;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;

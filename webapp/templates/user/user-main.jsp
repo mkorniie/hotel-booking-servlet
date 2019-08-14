@@ -1,8 +1,8 @@
-<%@ page import="ua.mkorniie.model.pojo.User" %>
-<%@ page import="java.util.List" %>
-<%@ page import="java.util.Arrays" %>
+<%@ page import="ua.mkorniie.controller.util.Localization" %>
 <%@ page import="ua.mkorniie.model.enums.RoomClass" %>
-<%@ page import="ua.mkorniie.controller.util.Localization" %><%--
+<%@ page import="ua.mkorniie.model.pojo.User" %>
+<%@ page import="java.util.Arrays" %>
+<%@ page import="java.util.List" %><%--
   Created by IntelliJ IDEA.
   User: safety
   Date: 2019-07-20

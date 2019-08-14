@@ -1,10 +1,10 @@
 package ua.mkorniie.controller.dao;
 
 import com.sun.istack.internal.NotNull;
+import org.apache.log4j.Logger;
 import ua.mkorniie.model.enums.RoomClass;
 import ua.mkorniie.model.pojo.DatePair;
 import ua.mkorniie.model.pojo.Request;
-import org.apache.log4j.Logger;
 import ua.mkorniie.model.pojo.User;
 
 import java.sql.Date;

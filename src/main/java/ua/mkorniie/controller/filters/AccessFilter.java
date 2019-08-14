@@ -1,8 +1,5 @@
 package ua.mkorniie.controller.filters;
 
-import java.util.Arrays;
-import java.util.List;
-
 import com.sun.istack.internal.NotNull;
 import ua.mkorniie.model.enums.Role;
 import ua.mkorniie.model.pojo.User;
@@ -12,8 +9,11 @@ import javax.servlet.annotation.WebFilter;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
+import java.util.Arrays;
+import java.util.List;
 
-import static ua.mkorniie.controller.util.Paths.*;
+import static ua.mkorniie.controller.util.Paths.ACCESS_ERROR_PAGE;
+import static ua.mkorniie.controller.util.Paths.GENERAL_ERROR;
 import static ua.mkorniie.controller.util.SessionTool.getUser;
 
 // Сам по себе - шаблон "Цепочка ответственности"?

@@ -1,12 +1,14 @@
 package ua.mkorniie.controller.dao;
 
 import com.sun.istack.internal.NotNull;
+import org.apache.log4j.Logger;
 import ua.mkorniie.model.enums.Language;
 import ua.mkorniie.model.enums.Role;
 import ua.mkorniie.model.pojo.User;
 
-import java.sql.*;
-import org.apache.log4j.Logger;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.sql.SQLException;
 
 public class UserDAO extends AbstractDAO<User> {
     private static final Logger logger = Logger.getLogger(UserDAO.class);

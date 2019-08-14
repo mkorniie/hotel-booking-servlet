@@ -1,8 +1,8 @@
 package ua.mkorniie.controller.dao;
 
 import com.sun.istack.internal.NotNull;
-import ua.mkorniie.model.exceptions.NotEnoughDataException;
 import org.apache.log4j.Logger;
+import ua.mkorniie.model.exceptions.NotEnoughDataException;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;

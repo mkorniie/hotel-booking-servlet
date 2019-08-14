@@ -1,12 +1,12 @@
 package ua.mkorniie.controller.dao;
 
 import com.sun.istack.internal.NotNull;
+import org.apache.log4j.Logger;
 import ua.mkorniie.model.pojo.Bill;
+
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
-
-import org.apache.log4j.Logger;
 
 public class BillDAO extends AbstractDAO<Bill> {
     private static final Logger logger = Logger.getLogger(BillDAO.class);

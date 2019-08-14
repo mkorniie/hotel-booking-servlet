@@ -1,9 +1,9 @@
+<%@ page import="ua.mkorniie.controller.util.Localization" %>
+<%@ page import="ua.mkorniie.model.enums.RoomClass" %>
 <%@ page import="ua.mkorniie.model.pojo.Bill" %>
-<%@ page import="java.util.List" %>
 <%@ page import="ua.mkorniie.model.pojo.Room" %>
 <%@ page import="java.util.Arrays" %>
-<%@ page import="ua.mkorniie.model.enums.RoomClass" %>
-<%@ page import="ua.mkorniie.controller.util.Localization" %>
+<%@ page import="java.util.List" %>
 <%--
   Created by IntelliJ IDEA.
   User: mkorniie

@@ -1,14 +1,14 @@
 package dao_tests;
 
+import org.apache.log4j.Logger;
+import org.junit.jupiter.api.AfterAll;
+import org.junit.jupiter.api.BeforeAll;
+import org.junit.jupiter.api.Test;
 import ua.mkorniie.controller.dao.UserDAO;
 import ua.mkorniie.controller.util.PasswordEncoder;
 import ua.mkorniie.model.enums.Language;
 import ua.mkorniie.model.enums.Role;
 import ua.mkorniie.model.pojo.User;
-import org.apache.log4j.Logger;
-import org.junit.jupiter.api.AfterAll;
-import org.junit.jupiter.api.BeforeAll;
-import org.junit.jupiter.api.Test;
 
 import java.util.List;
 

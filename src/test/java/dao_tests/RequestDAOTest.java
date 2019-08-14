@@ -1,5 +1,6 @@
 package dao_tests;
 
+import org.apache.log4j.Logger;
 import org.junit.jupiter.api.AfterAll;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
@@ -9,7 +10,6 @@ import ua.mkorniie.model.enums.RoomClass;
 import ua.mkorniie.model.pojo.DatePair;
 import ua.mkorniie.model.pojo.Request;
 import ua.mkorniie.model.pojo.User;
-import org.apache.log4j.Logger;
 
 import java.sql.Date;
 import java.util.List;

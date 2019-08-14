@@ -1,8 +1,8 @@
+<%@ page import="ua.mkorniie.controller.dao.BillDAOProxy" %>
+<%@ page import="ua.mkorniie.controller.util.Localization" %>
+<%@ page import="ua.mkorniie.model.pojo.Bill" %>
 <%@ page import="ua.mkorniie.model.pojo.Request" %>
 <%@ page import="java.util.List" %>
-<%@ page import="ua.mkorniie.controller.util.Localization" %>
-<%@ page import="ua.mkorniie.controller.dao.BillDAOProxy" %>
-<%@ page import="ua.mkorniie.model.pojo.Bill" %>
 <%--
   Created by IntelliJ IDEA.
   User: safety

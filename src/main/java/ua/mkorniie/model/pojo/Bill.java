@@ -1,8 +1,9 @@
 package ua.mkorniie.model.pojo;
 
 import com.sun.istack.internal.NotNull;
-import lombok.*;
-
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
 import org.apache.log4j.Logger;
 import ua.mkorniie.controller.util.Rounder;
 

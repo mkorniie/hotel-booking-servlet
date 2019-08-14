@@ -1,11 +1,13 @@
 package ua.mkorniie.controller.dao;
 
 import com.sun.istack.internal.NotNull;
-import ua.mkorniie.model.pojo.Room;
-import ua.mkorniie.model.enums.RoomClass;
 import org.apache.log4j.Logger;
+import ua.mkorniie.model.enums.RoomClass;
+import ua.mkorniie.model.pojo.Room;
 
-import java.sql.*;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.sql.SQLException;
 
 public class RoomDAO extends AbstractDAO<Room> {
     private static final Logger logger = Logger.getLogger(RoomDAO.class);

@@ -1,9 +1,9 @@
-<%@ page import="java.util.List" %>
-<%@ page import="java.util.Arrays" %>
-<%@ page import="ua.mkorniie.model.pojo.User" %>
-<%@ page import="ua.mkorniie.model.enums.Role" %>
-<%@ page import="ua.mkorniie.model.enums.Language" %>
 <%@ page import="ua.mkorniie.controller.util.Localization" %>
+<%@ page import="ua.mkorniie.model.enums.Language" %>
+<%@ page import="ua.mkorniie.model.enums.Role" %>
+<%@ page import="ua.mkorniie.model.pojo.User" %>
+<%@ page import="java.util.Arrays" %>
+<%@ page import="java.util.List" %>
 <%@ page contentType="text/html;charset=UTF-8"%>
 <html>
 <head>

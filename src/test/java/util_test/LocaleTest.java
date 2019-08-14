@@ -1,8 +1,8 @@
 package util_test;
 
 import org.junit.Test;
-import ua.mkorniie.model.enums.Language;
 import ua.mkorniie.controller.util.Localization;
+import ua.mkorniie.model.enums.Language;
 
 
 public class LocaleTest {

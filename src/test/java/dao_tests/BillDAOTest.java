@@ -1,17 +1,17 @@
 package dao_tests;
 
+import org.apache.log4j.Logger;
+import org.junit.jupiter.api.AfterAll;
+import org.junit.jupiter.api.BeforeAll;
+import org.junit.jupiter.api.Test;
 import ua.mkorniie.controller.dao.BillDAO;
 import ua.mkorniie.controller.dao.RequestDAO;
 import ua.mkorniie.controller.dao.RoomDAO;
 import ua.mkorniie.model.pojo.Bill;
-import org.junit.jupiter.api.AfterAll;
-import org.junit.jupiter.api.BeforeAll;
-import org.junit.jupiter.api.Test;
-
-import java.util.List;
-import org.apache.log4j.Logger;
 import ua.mkorniie.model.pojo.Request;
 import ua.mkorniie.model.pojo.Room;
+
+import java.util.List;
 
 class BillDAOTest {
     private static final Logger logger = Logger.getLogger(BillDAOTest.class);

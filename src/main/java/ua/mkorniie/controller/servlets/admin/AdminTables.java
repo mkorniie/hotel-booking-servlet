@@ -1,10 +1,11 @@
 package ua.mkorniie.controller.servlets.admin;
 
 import com.sun.istack.internal.NotNull;
-import ua.mkorniie.controller.dao.*;
+import ua.mkorniie.controller.dao.BillDAO;
+import ua.mkorniie.controller.dao.RoomDAO;
+import ua.mkorniie.controller.util.Localization;
 import ua.mkorniie.model.enums.RoomClass;
 import ua.mkorniie.model.pojo.Room;
-import ua.mkorniie.controller.util.Localization;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;

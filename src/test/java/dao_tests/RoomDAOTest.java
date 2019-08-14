@@ -1,12 +1,12 @@
 package dao_tests;
 
-import ua.mkorniie.controller.dao.RoomDAO;
-import ua.mkorniie.model.enums.RoomClass;
-import ua.mkorniie.model.pojo.Room;
 import org.apache.log4j.Logger;
 import org.junit.jupiter.api.AfterAll;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
+import ua.mkorniie.controller.dao.RoomDAO;
+import ua.mkorniie.model.enums.RoomClass;
+import ua.mkorniie.model.pojo.Room;
 
 import java.util.List;
 

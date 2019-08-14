@@ -1,6 +1,6 @@
+<%@ page import="ua.mkorniie.controller.util.Localization" %>
 <%@ page import="ua.mkorniie.model.pojo.Bill" %>
 <%@ page import="java.util.List" %>
-<%@ page import="ua.mkorniie.controller.util.Localization" %>
 <%--
   Created by IntelliJ IDEA.
   User: safety

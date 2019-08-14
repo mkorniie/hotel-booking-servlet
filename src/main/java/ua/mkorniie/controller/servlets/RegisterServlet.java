@@ -1,11 +1,11 @@
 package ua.mkorniie.controller.servlets;
 
 import ua.mkorniie.controller.dao.UserDAO;
-import ua.mkorniie.model.enums.Role;
-import ua.mkorniie.model.pojo.User;
 import ua.mkorniie.controller.util.Localization;
 import ua.mkorniie.controller.util.PasswordEncoder;
 import ua.mkorniie.controller.util.StringConverter;
+import ua.mkorniie.model.enums.Role;
+import ua.mkorniie.model.pojo.User;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
