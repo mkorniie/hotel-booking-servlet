@@ -65,6 +65,7 @@ public class AdminTables extends HttpServlet {
     private void showNewForm(@NotNull HttpServletRequest request, @NotNull HttpServletResponse response)
             throws ServletException, IOException {
         String templatePath = "templates/admin/";
-        request.getRequestDispatcher(templatePath + "tables.jsp").forward(request, response);
+        response.sendRedirect(request.getContextPath() + "/admin-tables");
+//        request.getRequestDispatcher(templatePath + "tables.jsp").forward(request, response);
     }
 }

@@ -96,7 +96,6 @@ CREATE TABLE IF NOT EXISTS `hotel`.`bills` (
     ON UPDATE NO ACTION)
 ENGINE = InnoDB;
 
+INSERT INTO `hotel`.`users` (`name`, `role`, `pass_encoded`, `email`) VALUES ('user', 'USER', 'a665a45920422f9d417e4867efdc4fb8a04a1f3fff1fa07e998e86f7f7a27ae3', 'user@user.com');
+INSERT INTO `hotel`.`users` (`name`, `role`, `pass_encoded`, `email`) VALUES ('admin', 'USER', 'a665a45920422f9d417e4867efdc4fb8a04a1f3fff1fa07e998e86f7f7a27ae3', 'ad@ad.com');
 
-SET SQL_MODE=@OLD_SQL_MODE;
-SET FOREIGN_KEY_CHECKS=@OLD_FOREIGN_KEY_CHECKS;
-SET UNIQUE_CHECKS=@OLD_UNIQUE_CHECKS;
