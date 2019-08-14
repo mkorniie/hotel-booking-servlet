@@ -43,7 +43,8 @@ public class ApproveServlet extends HttpServlet {
 
         Pagination<Room> roomPagination = new Pagination<>();
         roomPagination.paginate(matchingRooms, request, response);
-        request.getRequestDispatcher(Paths.APPROVE_ROOM_REQ.getUrl()).forward(request, response);
+        request.getRequestDispatcher("templates/admin/approve-request.jsp").forward(request, response);
+        return;
     }
 
     private List<Room> findMatchingRooms(@NotNull Request selected) {
@@ -97,6 +98,7 @@ public class ApproveServlet extends HttpServlet {
                 int num = Integer.parseInt(id);
                 request.setAttribute("req-id", num);
                 showApprovePage(request, response);
+                return;
             } catch (NumberFormatException e) {
                 logger.error(e.getMessage());
             }

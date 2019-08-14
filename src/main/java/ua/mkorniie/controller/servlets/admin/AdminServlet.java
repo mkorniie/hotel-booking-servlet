@@ -102,15 +102,17 @@ public class AdminServlet extends HttpServlet {
     }
 
     private void forwardToServlet(@NotNull HttpServletRequest request, @NotNull HttpServletResponse response) throws ServletException, IOException {
-        ServletContext servletContext = getServletContext();
-        RequestDispatcher requestDispatcher = servletContext.getRequestDispatcher("/approve");
-        requestDispatcher.forward(request, response);
+//        ServletContext servletContext = getServletContext();
+//        RequestDispatcher requestDispatcher = servletContext.getRequestDispatcher("/approve");
+//        requestDispatcher.forward(request, response);
+        request.getRequestDispatcher("/approve").forward(request, response);
     }
 
     private void processAdminRequest(@NotNull HttpServletRequest request, @NotNull HttpServletResponse response)
             throws ServletException, IOException{
         String method = request.getParameter("method");
         String id = request.getParameter("id");
+        boolean invalid = false;
 
         if(method != null && id != null && method.equals("approve")) {
             try {
@@ -118,8 +120,13 @@ public class AdminServlet extends HttpServlet {
                 request.setAttribute("req-id", num);
                 forwardToServlet(request, response);
             } catch (NumberFormatException e) {
+                invalid = true;
                 logger.error(e.getMessage());
             }
+            if (!invalid) {
+                return;
+            }
+
         }
         showAdminPage(request, response);
     }

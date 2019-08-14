@@ -57,7 +57,7 @@
                     <td><%=req.getStartDate()%></td>
                     <td><%=req.getEndDate()%></td>
                     <td>
-                        <a href="/admin?method=approve&id=<%=req.getId()%>"><%=Localization.getString("approve-btn")%></a></td>
+                        <a href="/approve?method=approve&id=<%=req.getId()%>"><%=Localization.getString("approve-btn")%></a></td>
                     </tr>
             <%}%>
         </tbody>

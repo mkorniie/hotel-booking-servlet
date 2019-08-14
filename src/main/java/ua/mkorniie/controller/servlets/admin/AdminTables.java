@@ -56,16 +56,14 @@ public class AdminTables extends HttpServlet {
     }
 
     private void showPage(@NotNull HttpServletRequest request, @NotNull HttpServletResponse response)
-            throws ServletException, IOException {
+            throws IOException {
         request.setAttribute("bills", new BillDAO().selectAll());
         request.setAttribute("rooms", new RoomDAO().selectAll());
         showNewForm(request, response);
     }
 
     private void showNewForm(@NotNull HttpServletRequest request, @NotNull HttpServletResponse response)
-            throws ServletException, IOException {
-        String templatePath = "templates/admin/";
+            throws IOException {
         response.sendRedirect(request.getContextPath() + "/admin-tables");
-//        request.getRequestDispatcher(templatePath + "tables.jsp").forward(request, response);
     }
 }
