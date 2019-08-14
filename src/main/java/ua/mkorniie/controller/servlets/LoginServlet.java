@@ -1,12 +1,13 @@
 package ua.mkorniie.controller.servlets;
 
+import org.apache.log4j.Logger;
 import ua.mkorniie.controller.dao.UserDAO;
+import ua.mkorniie.controller.util.Localization;
+import ua.mkorniie.controller.util.PasswordEncoder;
+import ua.mkorniie.controller.util.Paths;
+import ua.mkorniie.controller.util.StringConverter;
 import ua.mkorniie.model.enums.Role;
 import ua.mkorniie.model.pojo.User;
-import ua.mkorniie.controller.util.Localization;
-import ua.mkorniie.controller.util.Paths;
-import ua.mkorniie.controller.util.PasswordEncoder;
-import ua.mkorniie.controller.util.StringConverter;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -19,6 +20,7 @@ import java.util.List;
 
 @WebServlet("/login")
 public class LoginServlet extends HttpServlet {
+    private static final Logger logger = Logger.getLogger(LoginServlet.class);
 
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
@@ -30,7 +32,9 @@ public class LoginServlet extends HttpServlet {
         String login = request.getParameter("login");
         try {
             login = StringConverter.decodeParameter(request.getParameter("login"));
-        } catch (Exception e) {}
+        } catch (Exception e) {
+            logger.error(e.getMessage());
+        }
         String password = request.getParameter("password");
 
         UserDAO userDAO = new UserDAO();
@@ -58,7 +62,7 @@ public class LoginServlet extends HttpServlet {
             }
             request.getRequestDispatcher("templates/login.jsp").forward(request, response);
         } catch (Exception e) {
-//            e.printStackTrace();
+            logger.error(e.getMessage());
         }
     }
 }

@@ -1,6 +1,7 @@
 package ua.mkorniie.controller.servlets.admin;
 
 import com.sun.istack.internal.NotNull;
+import org.apache.log4j.Logger;
 import ua.mkorniie.controller.dao.BillDAO;
 import ua.mkorniie.controller.dao.RequestDAO;
 import ua.mkorniie.controller.dao.RoomDAO;
@@ -25,6 +26,8 @@ import java.util.List;
 
 @WebServlet("/approve")
 public class ApproveServlet extends HttpServlet {
+    private static final Logger logger = Logger.getLogger(ApproveServlet.class);
+
     private static RequestDAO requestDAO = new RequestDAO();
     private static RoomDAO roomDAO = new RoomDAO();
     private static BillDAO billDAO = new BillDAO();
@@ -38,7 +41,7 @@ public class ApproveServlet extends HttpServlet {
 
         List<Room> matchingRooms = findMatchingRooms(selected);
 
-        Pagination<Room> roomPagination = new Pagination();
+        Pagination<Room> roomPagination = new Pagination<>();
         roomPagination.paginate(matchingRooms, request, response);
         request.getRequestDispatcher(Paths.APPROVE_ROOM_REQ.getUrl()).forward(request, response);
     }
@@ -81,10 +84,7 @@ public class ApproveServlet extends HttpServlet {
         Date reqStart = b.getRequest().getDatePair().getStartDate();
         Date reqEnd = b.getRequest().getDatePair().getEndDate();
 
-        if (selectedStart.after(reqEnd) || reqStart.after(selectedEnd)) {
-            return false;
-        }
-        return true;
+        return !selectedStart.after(reqEnd) && !reqStart.after(selectedEnd);
     }
 
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
@@ -98,6 +98,7 @@ public class ApproveServlet extends HttpServlet {
                 request.setAttribute("req-id", num);
                 showApprovePage(request, response);
             } catch (NumberFormatException e) {
+                logger.error(e.getMessage());
             }
             ServletContext context = getServletContext();
             RequestDispatcher rd = context.getRequestDispatcher("/admin");
@@ -108,8 +109,8 @@ public class ApproveServlet extends HttpServlet {
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         try {
-            Integer roomId = Integer.parseInt(request.getParameter("room-select"));
-            Integer requestId = Integer.parseInt(request.getParameter("id"));
+            int roomId = Integer.parseInt(request.getParameter("room-select"));
+            int requestId = Integer.parseInt(request.getParameter("id"));
             request.getParameter("places");
 
             Room selected = roomDAO.selectById(roomId);

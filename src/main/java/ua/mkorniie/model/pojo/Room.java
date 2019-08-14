@@ -1,10 +1,13 @@
 package ua.mkorniie.model.pojo;
 
 
-import lombok.*;
-import ua.mkorniie.model.enums.RoomClass;
+import lombok.AllArgsConstructor;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
 import org.apache.log4j.Logger;
 import ua.mkorniie.controller.util.Rounder;
+import ua.mkorniie.model.enums.RoomClass;
 
 import java.util.Objects;
 

@@ -1,6 +1,7 @@
 package ua.mkorniie.controller.servlets.admin;
 
 import com.sun.istack.internal.NotNull;
+import org.apache.log4j.Logger;
 import ua.mkorniie.controller.dao.*;
 import ua.mkorniie.controller.util.Pagination;
 import ua.mkorniie.model.enums.Language;
@@ -25,6 +26,8 @@ import java.util.stream.Collectors;
 
 @WebServlet(urlPatterns = {"/admin", "/admin-users", "/admin-tables", "/admin-update", "/admin-users-update"})
 public class AdminServlet extends HttpServlet {
+    private static final Logger logger = Logger.getLogger(AdminServlet.class);
+
     private Pagination<Request> requestPagination = new Pagination<>();
     private Pagination<User>    userPagination = new Pagination<>();
     private Pagination<Room>    roomPagination = new Pagination<>();
@@ -40,14 +43,10 @@ public class AdminServlet extends HttpServlet {
                 doGet(request, response);
                 break;
             case "/admin-update":
-                String name = request.getParameter("name");
-//                String country =request.getParameter("country");
-//                String description = request.getParameter("desc");
-//                new RoomDAO().insert(new Publisher(name, country, description));
                 showAdminPage(request, response);
                 break;
             case "/admin-users-update":
-                name = request.getParameter("name");
+                String name = request.getParameter("name");
                 String password = PasswordEncoder.getSHA(request.getParameter("pass"));
                 Role role = Role.valueOf(request.getParameter("role"));
                 String email = request.getParameter("mail");
@@ -92,8 +91,6 @@ public class AdminServlet extends HttpServlet {
         request.getRequestDispatcher(templatePath + filename).forward(request, response);
     }
 
-    //TODO: add filters everywhere (user req, etc.)
-    //TODO: switch to JSTL
     private void showAdminPage(@NotNull HttpServletRequest request, @NotNull HttpServletResponse response) throws ServletException, IOException {
 
         List<Request> requests = new RequestDAO().selectAll().stream()
@@ -104,9 +101,9 @@ public class AdminServlet extends HttpServlet {
         showNewForm(request, response, "success_admin.jsp");
     }
 
-    private void forwardToServlet(@NotNull String path, @NotNull HttpServletRequest request, @NotNull HttpServletResponse response) throws ServletException, IOException {
+    private void forwardToServlet(@NotNull HttpServletRequest request, @NotNull HttpServletResponse response) throws ServletException, IOException {
         ServletContext servletContext = getServletContext();
-        RequestDispatcher requestDispatcher = servletContext.getRequestDispatcher(path);
+        RequestDispatcher requestDispatcher = servletContext.getRequestDispatcher("/approve");
         requestDispatcher.forward(request, response);
     }
 
@@ -119,8 +116,9 @@ public class AdminServlet extends HttpServlet {
             try {
                 int num = Integer.parseInt(id);
                 request.setAttribute("req-id", num);
-                forwardToServlet("/approve", request, response);
+                forwardToServlet(request, response);
             } catch (NumberFormatException e) {
+                logger.error(e.getMessage());
             }
         }
         showAdminPage(request, response);
@@ -133,13 +131,16 @@ public class AdminServlet extends HttpServlet {
         UserDAOProxy proxyDao = new UserDAOProxy();
 
         if(method != null && id != null) {
-            if (method.equals("remove"))
-                proxyDao.delete(id);
-            else if (method.equals("priviledge_a")){
-                proxyDao.toAdmin(id);
-            }
-            else if (method.equals("priviledge_u")){
-                proxyDao.toUser(id);
+            switch (method) {
+                case "remove":
+                    proxyDao.delete(id);
+                    break;
+                case "priviledge_a":
+                    proxyDao.toAdmin(id);
+                    break;
+                case "priviledge_u":
+                    proxyDao.toUser(id);
+                    break;
             }
         }
         showUserTable(request, response);

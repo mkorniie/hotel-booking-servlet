@@ -1,12 +1,14 @@
 package ua.mkorniie.model.pojo;
 
 import com.sun.istack.internal.NotNull;
-import lombok.*;
+import lombok.AllArgsConstructor;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
 import org.apache.log4j.Logger;
 import ua.mkorniie.model.enums.RoomClass;
 
 import java.sql.Date;
-import java.util.List;
 import java.util.Objects;
 
 // TODO: Finish adding @NotNull

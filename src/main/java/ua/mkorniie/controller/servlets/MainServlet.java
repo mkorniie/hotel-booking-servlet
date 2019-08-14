@@ -1,5 +1,6 @@
 package ua.mkorniie.controller.servlets;
 
+import org.apache.log4j.Logger;
 import ua.mkorniie.model.enums.Role;
 import ua.mkorniie.model.pojo.User;
 
@@ -13,6 +14,7 @@ import java.io.IOException;
 
 @WebServlet("/main")
 public class MainServlet extends HttpServlet {
+    private static final Logger logger = Logger.getLogger(MainServlet.class);
 
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
@@ -22,6 +24,7 @@ public class MainServlet extends HttpServlet {
             User currentUser = (User) currentSession.getAttribute("user");
             role = currentUser.getRole();
         } catch (Exception e) {
+            logger.error(e.getMessage());
         }
 
         request.setAttribute("currentRole", role);

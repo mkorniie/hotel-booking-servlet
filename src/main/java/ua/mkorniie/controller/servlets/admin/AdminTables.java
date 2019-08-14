@@ -22,37 +22,29 @@ public class AdminTables extends HttpServlet {
 
         String action = request.getServletPath();
 
-        switch (action) {
-            case "/admin-update-rooms":
-                try {
-                    String pictureURL = request.getParameter("picture");
-                    log("Successfully getting pictureURL: " + pictureURL);
+        if ("/admin-update-rooms".equals(action)) {
+            try {
+                String pictureURL = request.getParameter("picture");
+                log("Successfully getting pictureURL: " + pictureURL);
 
-                    int places = Integer.parseInt(request.getParameter("places"));
-                    log("Successfully getting number of places: " + places);
+                int places = Integer.parseInt(request.getParameter("places"));
+                log("Successfully getting number of places: " + places);
 
-                    RoomClass roomClass = RoomClass.valueOf(request.getParameter("roomClass"));
-                    log("Successfully getting class of rooms: " + roomClass);
+                RoomClass roomClass = RoomClass.valueOf(request.getParameter("roomClass"));
+                log("Successfully getting class of rooms: " + roomClass);
 
-                    double price = Double.parseDouble(request.getParameter("price"));
-                    log("Successfully getting price of rooms (double value): " + price);
+                double price = Double.parseDouble(request.getParameter("price"));
+                log("Successfully getting price of rooms (double value): " + price);
 
-//                    boolean isOccupied = Boolean.getBoolean(request.getParameter("isOccupied"));
-//                    log("Successfully getting isOccupied (boolean value): " + isOccupied);
+                log("Successfully setting isOccupied (boolean value) to false (by default). ");
+                roomDAO.insert(new Room(places, roomClass, false, pictureURL, price));
+            } catch (Exception e) {
+                log("Unable to create Room object.");
+            }
 
-
-                    boolean isOccupied = false;
-                    log("Successfully setting isOccupied (boolean value) to false (by default). ");
-                    roomDAO.insert(new Room(places, roomClass, isOccupied, pictureURL, price));
-                } catch (Exception e) {
-                    log("Unable to create Room object.");
-                }
-
-                showPage(request, response);
-                break;
-            default:
-                showNewForm(request, response, "tables.jsp");
-                break;
+            showPage(request, response);
+        } else {
+            showNewForm(request, response);
         }
     }
 
@@ -60,19 +52,19 @@ public class AdminTables extends HttpServlet {
             throws ServletException, IOException {
 
         Localization.changeLocale(request);
-        showNewForm(request, response, "tables.jsp");
+        showNewForm(request, response);
     }
 
     private void showPage(@NotNull HttpServletRequest request, @NotNull HttpServletResponse response)
             throws ServletException, IOException {
         request.setAttribute("bills", new BillDAO().selectAll());
         request.setAttribute("rooms", new RoomDAO().selectAll());
-        showNewForm(request, response, "tables.jsp");
+        showNewForm(request, response);
     }
 
-    private void showNewForm(@NotNull HttpServletRequest request, @NotNull HttpServletResponse response, @NotNull String filename)
+    private void showNewForm(@NotNull HttpServletRequest request, @NotNull HttpServletResponse response)
             throws ServletException, IOException {
         String templatePath = "templates/admin/";
-        request.getRequestDispatcher(templatePath + filename).forward(request, response);
+        request.getRequestDispatcher(templatePath + "tables.jsp").forward(request, response);
     }
 }

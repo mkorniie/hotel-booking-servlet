@@ -30,18 +30,13 @@ public class AccessFilter implements Filter {
         System.out.println("Access filter initialized");
     }
 
-    public static boolean requiresAdminRights(@NotNull String servletPath) {
+    private static boolean requiresAdminRights(@NotNull String servletPath) {
         return adminPages.stream().filter(servletPath::equals).count() == 1;
     }
 
-    public static boolean  requiresUserRights(@NotNull String servletPath) {
+    private static boolean  requiresUserRights(@NotNull String servletPath) {
         return userPages.stream().filter(servletPath::equals).count() == 1;
     }
-
-    // TODO: convert into test
-//    public static void main(String[] args) {
-//        System.out.println(requiresUserRights("/user-bills"));
-//    }
 
     @Override
     public void doFilter(ServletRequest servletRequest, ServletResponse servletResponse, FilterChain filterChain) throws IOException, ServletException {
