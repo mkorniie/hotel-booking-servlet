@@ -1,4 +1,4 @@
-package ua.mkorniie.model.util;
+package ua.mkorniie.controller.util;
 
 import com.sun.istack.internal.NotNull;
 import org.apache.log4j.Logger;

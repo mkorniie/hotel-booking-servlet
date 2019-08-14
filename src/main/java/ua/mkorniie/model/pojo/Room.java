@@ -4,10 +4,9 @@ package ua.mkorniie.model.pojo;
 import lombok.*;
 import ua.mkorniie.model.enums.RoomClass;
 import org.apache.log4j.Logger;
-import ua.mkorniie.model.util.Rounder;
+import ua.mkorniie.controller.util.Rounder;
 
 import java.util.Objects;
-import java.util.Optional;
 
 @AllArgsConstructor
 @NoArgsConstructor

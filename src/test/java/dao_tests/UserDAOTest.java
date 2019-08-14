@@ -1,7 +1,7 @@
 package dao_tests;
 
 import ua.mkorniie.controller.dao.UserDAO;
-import ua.mkorniie.model.util.PasswordEncoder;
+import ua.mkorniie.controller.util.PasswordEncoder;
 import ua.mkorniie.model.enums.Language;
 import ua.mkorniie.model.enums.Role;
 import ua.mkorniie.model.pojo.User;

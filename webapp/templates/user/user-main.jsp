@@ -2,7 +2,7 @@
 <%@ page import="java.util.List" %>
 <%@ page import="java.util.Arrays" %>
 <%@ page import="ua.mkorniie.model.enums.RoomClass" %>
-<%@ page import="ua.mkorniie.model.util.Localization" %><%--
+<%@ page import="ua.mkorniie.controller.util.Localization" %><%--
   Created by IntelliJ IDEA.
   User: safety
   Date: 2019-07-20

@@ -3,7 +3,7 @@ package ua.mkorniie.controller.servlets.user;
 import com.sun.istack.internal.NotNull;
 import org.apache.log4j.Logger;
 import ua.mkorniie.controller.dao.BillDAOProxy;
-import ua.mkorniie.model.util.Pagination;
+import ua.mkorniie.controller.util.Pagination;
 import ua.mkorniie.model.pojo.Bill;
 import ua.mkorniie.model.pojo.User;
 

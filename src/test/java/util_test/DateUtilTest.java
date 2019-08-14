@@ -1,7 +1,7 @@
 package util_test;
 
 import org.junit.Test;
-import ua.mkorniie.model.util.DateUtil;
+import ua.mkorniie.controller.util.DateUtil;
 
 import java.sql.Date;
 

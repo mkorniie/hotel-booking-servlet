@@ -1,4 +1,4 @@
-package ua.mkorniie.model.util;
+package ua.mkorniie.controller.util;
 
 //TODO: finish transferring addresses here
 //TODO: add servlet paths here

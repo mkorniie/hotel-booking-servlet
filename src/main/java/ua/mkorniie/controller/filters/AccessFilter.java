@@ -13,8 +13,8 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 
-import static ua.mkorniie.model.util.Paths.*;
-import static ua.mkorniie.model.util.SessionTool.getUser;
+import static ua.mkorniie.controller.util.Paths.*;
+import static ua.mkorniie.controller.util.SessionTool.getUser;
 
 // Сам по себе - шаблон "Цепочка ответственности"?
 @WebFilter("/*")

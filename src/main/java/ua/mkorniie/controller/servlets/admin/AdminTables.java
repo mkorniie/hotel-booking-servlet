@@ -4,7 +4,7 @@ import com.sun.istack.internal.NotNull;
 import ua.mkorniie.controller.dao.*;
 import ua.mkorniie.model.enums.RoomClass;
 import ua.mkorniie.model.pojo.Room;
-import ua.mkorniie.model.util.Localization;
+import ua.mkorniie.controller.util.Localization;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;

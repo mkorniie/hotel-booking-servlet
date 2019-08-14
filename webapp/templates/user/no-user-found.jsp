@@ -1,4 +1,4 @@
-<%@ page import="ua.mkorniie.model.util.Localization" %>
+<%@ page import="ua.mkorniie.controller.util.Localization" %>
 <%@ page contentType="text/html; charset=UTF-8"
          pageEncoding="UTF-8" isErrorPage="true" %>
 <!DOCTYPE html>

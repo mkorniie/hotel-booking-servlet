@@ -1,6 +1,6 @@
 package ua.mkorniie.controller.filters;
 
-import ua.mkorniie.model.util.Localization;
+import ua.mkorniie.controller.util.Localization;
 
 import javax.servlet.*;
 import javax.servlet.annotation.WebFilter;

@@ -8,7 +8,7 @@ import ua.mkorniie.model.pojo.User;
 
 import java.util.Optional;
 
-import static ua.mkorniie.model.util.StringConverter.strToInt;
+import static ua.mkorniie.controller.util.StringConverter.strToInt;
 
 public class UserDAOProxy extends UserDAO {
     private static final Logger logger = Logger.getLogger(UserDAOProxy.class);

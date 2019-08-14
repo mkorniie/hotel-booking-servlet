@@ -1,6 +1,6 @@
 <%@ page import="ua.mkorniie.model.pojo.User" %>
 <%@ page import="ua.mkorniie.model.enums.Role" %>
-<%@ page import="ua.mkorniie.model.util.Localization" %>
+<%@ page import="ua.mkorniie.controller.util.Localization" %>
 <%--
   Created by IntelliJ IDEA.
   User: safety

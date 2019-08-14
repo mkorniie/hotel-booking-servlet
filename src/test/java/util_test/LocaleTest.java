@@ -2,7 +2,7 @@ package util_test;
 
 import org.junit.Test;
 import ua.mkorniie.model.enums.Language;
-import ua.mkorniie.model.util.Localization;
+import ua.mkorniie.controller.util.Localization;
 
 
 //TODO: finish tests for util package

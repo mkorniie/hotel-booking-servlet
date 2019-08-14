@@ -2,14 +2,14 @@ package ua.mkorniie.controller.servlets.admin;
 
 import com.sun.istack.internal.NotNull;
 import ua.mkorniie.controller.dao.*;
-import ua.mkorniie.model.util.Pagination;
+import ua.mkorniie.controller.util.Pagination;
 import ua.mkorniie.model.enums.Language;
 import ua.mkorniie.model.enums.Role;
 import ua.mkorniie.model.pojo.Bill;
 import ua.mkorniie.model.pojo.Request;
 import ua.mkorniie.model.pojo.Room;
 import ua.mkorniie.model.pojo.User;
-import ua.mkorniie.model.util.PasswordEncoder;
+import ua.mkorniie.controller.util.PasswordEncoder;
 
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletContext;

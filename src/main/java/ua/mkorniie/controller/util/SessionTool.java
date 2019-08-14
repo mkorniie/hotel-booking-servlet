@@ -1,4 +1,4 @@
-package ua.mkorniie.model.util;
+package ua.mkorniie.controller.util;
 
 import ua.mkorniie.model.pojo.User;
 

@@ -4,7 +4,7 @@ import com.sun.istack.internal.NotNull;
 import lombok.*;
 
 import org.apache.log4j.Logger;
-import ua.mkorniie.model.util.Rounder;
+import ua.mkorniie.controller.util.Rounder;
 
 import java.util.Objects;
 

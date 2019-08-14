@@ -1,7 +1,7 @@
 package servlet_tests;
 
 import org.junit.jupiter.api.Test;
-import ua.mkorniie.model.util.Pagination;
+import ua.mkorniie.controller.util.Pagination;
 
 import java.util.ArrayList;
 import java.util.List;

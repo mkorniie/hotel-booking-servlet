@@ -1,6 +1,6 @@
 <%@ page import="java.util.ArrayList" %>
 <%@ page import="ua.mkorniie.model.pojo.Request" %>
-<%@ page import="ua.mkorniie.model.util.Localization" %>
+<%@ page import="ua.mkorniie.controller.util.Localization" %>
 <%@ page contentType="text/html;charset=UTF-8" %>
 <!DOCTYPE html>
 <html lang="en">

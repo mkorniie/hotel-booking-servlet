@@ -1,4 +1,4 @@
-<%@ page import="ua.mkorniie.model.util.Localization" %>
+<%@ page import="ua.mkorniie.controller.util.Localization" %>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <%--
   Created by IntelliJ IDEA.

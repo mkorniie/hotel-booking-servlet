@@ -1,9 +1,7 @@
 package ua.mkorniie.controller.servlets;
 
-import com.mysql.cj.Session;
 import ua.mkorniie.model.enums.Role;
 import ua.mkorniie.model.pojo.User;
-import ua.mkorniie.model.util.Localization;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;

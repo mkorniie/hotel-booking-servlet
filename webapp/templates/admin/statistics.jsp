@@ -1,4 +1,4 @@
-<%@ page import="ua.mkorniie.model.util.Localization" %><%--
+<%@ page import="ua.mkorniie.controller.util.Localization" %><%--
   Created by IntelliJ IDEA.
   User: mkorniie
   Date: 2019-06-11

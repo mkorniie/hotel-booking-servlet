@@ -7,8 +7,8 @@ import ua.mkorniie.controller.dao.RoomDAO;
 import ua.mkorniie.model.pojo.Bill;
 import ua.mkorniie.model.pojo.Request;
 import ua.mkorniie.model.pojo.Room;
-import ua.mkorniie.model.util.Pagination;
-import ua.mkorniie.model.util.Paths;
+import ua.mkorniie.controller.util.Pagination;
+import ua.mkorniie.controller.util.Paths;
 
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletContext;

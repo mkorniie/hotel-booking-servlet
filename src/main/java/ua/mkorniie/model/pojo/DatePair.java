@@ -2,7 +2,7 @@ package ua.mkorniie.model.pojo;
 
 import com.sun.istack.internal.NotNull;
 import lombok.Getter;
-import ua.mkorniie.model.util.DateUtil;
+import ua.mkorniie.controller.util.DateUtil;
 
 import java.sql.Date;
 import java.util.Objects;
